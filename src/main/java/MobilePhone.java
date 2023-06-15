@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -7,7 +8,7 @@ public class MobilePhone {
     private UUID id;
     private MobileModel model;
     private boolean isAvailable;
-    private LocalDateTime bookedAt;
+    private LocalDate bookedAt;
     private BookedBy bookedBy;
 
 
@@ -32,7 +33,7 @@ public class MobilePhone {
         return isAvailable;
     }
 
-    public LocalDateTime getBookedAt() {
+    public LocalDate getBookedAt() {
         return bookedAt;
     }
 
@@ -42,7 +43,7 @@ public class MobilePhone {
 
     public void book(BookedBy bookedBy) {
         this.isAvailable = false;
-        this.bookedAt = LocalDateTime.now();
+        this.bookedAt = LocalDate.now();
         this.bookedBy = bookedBy;
     }
 
