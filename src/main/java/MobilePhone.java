@@ -41,12 +41,19 @@ public class MobilePhone {
         return bookedBy;
     }
 
+    /**
+     * Method to book a phone
+     * @param bookedBy
+     */
     public void book(BookedBy bookedBy) {
         this.isAvailable = false;
         this.bookedAt = LocalDate.now();
         this.bookedBy = bookedBy;
     }
 
+    /**
+     * Method to return a phone
+     */
     public void returned() {
         this.isAvailable = true;
         this.bookedAt = null;

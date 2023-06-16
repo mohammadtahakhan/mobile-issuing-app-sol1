@@ -10,17 +10,24 @@ class MobilePhoneInventory {
         phones = new ArrayList<>();
     }
 
+    /**
+     * public method to get singleton object of inventory
+     * @return
+     */
     public static MobilePhoneInventory getInstance() {
         if (instance == null) {
-            //synchronized (MobilePhoneInventory.class) {
+
                 if (instance == null) {
                     instance = new MobilePhoneInventory();
                 }
-            //}
+
         }
         return instance;
     }
 
+    /**
+     * Initial initialization
+     */
     public void initializePhones() {
         MobileModel samsungS9 = MobileModel.createModel("Samsung Galaxy S9");
         MobileModel samsungS8 = MobileModel.createModel("Samsung Galaxy S8");

@@ -1,3 +1,6 @@
+/**
+ * Main method with a happy path scenario to test
+ */
 public class MobilePhoneBookingTestWithMain {
     public static void main(String[] args) {
         MobilePhoneBookingService booking = new MobilePhoneBookingService();

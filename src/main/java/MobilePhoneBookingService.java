@@ -10,6 +10,12 @@ class MobilePhoneBookingService {
         inventory.initializePhones();
     }
 
+    /**
+     * Service method to book a phone
+     * @param modelName
+     * @param bookedBy
+     * @return
+     */
     public String bookPhone(String modelName, BookedBy bookedBy) {
 
         String bookedPhoneId=null;
@@ -38,6 +44,10 @@ class MobilePhoneBookingService {
         }
     }
 
+    /**
+     * Service method to return a phone
+     * @param modelName
+     */
     public void returnPhone(String modelName) {
         List<MobilePhone> phones = inventory.getPhones();
         for (MobilePhone phone : phones) {
@@ -50,6 +60,11 @@ class MobilePhoneBookingService {
         System.out.println("Phone not found for return: " + modelName);
     }
 
+    /**
+     * Get a phone by model name
+     * @param modelName
+     * @return
+     */
     public MobilePhone getPhoneByModel(String modelName) {
         List<MobilePhone> phones = inventory.getPhones();
         for (MobilePhone phone : phones) {
@@ -60,6 +75,11 @@ class MobilePhoneBookingService {
         return null;
     }
 
+    /**
+     * Get available phone by model name
+     * @param modelName
+     * @return
+     */
     public MobilePhone getAvailablePhoneByModel(String modelName) {
         List<MobilePhone> phones = inventory.getPhones();
         for (MobilePhone phone : phones) {
@@ -70,6 +90,11 @@ class MobilePhoneBookingService {
         return null;
     }
 
+    /*Get booked phone by model name*
+     *
+     * @param modelName
+     * @return
+     */
     public MobilePhone getBookedPhoneByModel(String modelName) {
         List<MobilePhone> phones = inventory.getPhones();
         for (MobilePhone phone : phones) {
@@ -80,6 +105,11 @@ class MobilePhoneBookingService {
         return null;
     }
 
+    /**
+     * Get available phone by Id
+     * @param mobilePhoneId
+     * @return
+     */
     public MobilePhone getAvailablePhoneById(UUID mobilePhoneId) {
         List<MobilePhone> phones = inventory.getPhones();
         for (MobilePhone phone : phones) {
